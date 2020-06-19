@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/48312173/display-data-from-firebase-to-html-table?rq=1
+https://stackoverflow.com/questions/42824688/firebase-get-data-by-key-or-chid-values-javascript

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--  <link rel="stylesheet" type="text/css" href="style.css" />    -->    
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar bg-info w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b style="color:white;">Admin Panel</b></h3>
+  </div>
+    
+  <div class="w3-bar-block">
+    <a href="requestorder.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white;">Requests Order</a> 
+    <a href="vendorside.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white;">Vendor Side</a> 
+    <a href="vendorsprofile.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white;">Vendors Profile</a>
+    <a href="adminsection.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white;">Admin Section</a> 
+    <a href="successebook.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white;">Success Ebook Payment</a> 
+    <a href="userprofile.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white;">User Profile</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+ 
+   <div class="row">
+        <div class="container">
+    
+            <div class="alert alert-success success-message" style="display:none;">Data upload successfully.</div>
+            
+         <form id="contactForm">   <br>  
+             
+<div style="height: 90;font-size: 44;" class=" alert-info" role="alert">
+    <b style="font-size: 44;">Customers  Information</b>
+</div>             
+        
+        <table id="tbl_users_list" class="table table-hover table-dark">
+             <td id="user_address">Address</td>
+             <td id="user_pincode">Pincode</td>
+             <td id="user_status">Status</td>
+             <td id="user_total">Total</td>    
+        </table>    
+     
+            </form></div></div></div>       
+<!-- End page content -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="request.js"></script>  
+<!--<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>    -->
+    
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
